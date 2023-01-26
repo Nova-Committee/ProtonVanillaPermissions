@@ -43,8 +43,13 @@ minecraft {
     runDir = "idea"
 }
 
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
     compile files("$sourceSets.main.scala.outputDir")
+    implementation('com.github.Nova-Committee:Proton:Forge-1.7.10-0.0.1')
 }
 
 processResources
