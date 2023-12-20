@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod(modid = ProtonVanillaPermissions.MODID)
+@Mod(modid = ProtonVanillaPermissions.MODID, useMetadata = true, acceptableRemoteVersions = "*")
 public class ProtonVanillaPermissions {
     public static final String MODID = "pvperms";
 

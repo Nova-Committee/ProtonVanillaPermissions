@@ -13,7 +13,7 @@ plugins {
 
 version = project.mod_version
 group = project.maven_group
-archivesBaseName = "${project.archives_base_name}-Forge-1.12.2"
+archivesBaseName = "${project.mod_name}-Forge-1.12.2"
 
 // Set the toolchain version to decouple the Java we run Gradle with from the Java used to compile and run the mod
 java {
@@ -139,6 +139,8 @@ if (project.use_access_transformer.toBoolean()) {
 
 processResources {
     // This will ensure that this task is redone when the versions change
+    inputs.property 'mod_id', project.mod_id
+    inputs.property 'mod_name', project.mod_name
     inputs.property 'version', project.version
     inputs.property 'mcversion', project.minecraft.version
 
@@ -146,6 +148,8 @@ processResources {
     filesMatching(['mcmod.info', 'pack.mcmeta']) { fcd ->
         // Replace version and mcversion
         fcd.expand(
+                'mod_id': project.mod_id,
+                'mod_name': project.mod_name,
                 'version': project.version,
                 'mcversion': project.minecraft.version
         )

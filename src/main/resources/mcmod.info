@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "${mod_id}",
+    "name": "${mod_name}",
+    "description": "Use proton to manage permissions for vanilla commands!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "authorList": [
+      "Tapio"
+    ]
+  }
+]
