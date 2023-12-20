@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "committee.nova.pvperms.mixin",
+  "refmap": "mixins.pvperms.refmap.json",
+  "mixins": [
+    "MixinCommandBase"
+  ]
+}
